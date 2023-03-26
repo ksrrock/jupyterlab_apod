@@ -1,3 +1,4 @@
+// @ts-ignore
 import { expect, test } from '@jupyterlab/galata';
 
 /**
@@ -6,10 +7,11 @@ import { expect, test } from '@jupyterlab/galata';
  */
 test.use({ autoGoto: false });
 
+// @ts-ignore
 test('should emit an activation console message', async ({ page }) => {
   const logs: string[] = [];
 
-  page.on('console', message => {
+  page.on('console', (message: { text: () => string; }) => {
     logs.push(message.text());
   });
 
