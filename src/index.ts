@@ -96,12 +96,12 @@ function activate(app: JupyterFrontEnd, palette: ICommandPalette) {
   // Define a widget creator function
   const newWidget = () => {
     const content = new APODWidget();
-    const widget = new MainAreaWidget({content});
+    const widget = new MainAreaWidget({ content });
     widget.id = 'apod-jupyterlab';
     widget.title.label = 'Astronomy Picture';
     widget.title.closable = true;
     return widget;
-  }
+  };
 
   // Create a single widget
   let widget = newWidget();
