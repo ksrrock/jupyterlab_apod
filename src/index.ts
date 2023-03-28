@@ -102,7 +102,7 @@ function activate(
   restorer: ILayoutRestorer | null
 ) {
   console.log('JupyterLab extension jupyterlab_apod is activated!');
-
+  console.log('the JupyterLab main application:', app);
   // Define a widget creator function
   // Declare a widget variable
   let widget: MainAreaWidget<APODWidget>;
